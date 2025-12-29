@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ekow Daniels | Professional Photographer</title>
+    <meta name="description" content="Professional photography portfolio of Daniel Ekow, specializing in editorial, portraits, and landscape photography.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📸</text></svg>">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" as="style">
+    
+    <!-- Inline critical CSS for initial render -->
+    <style>
+        :root {
+            --color-bg: #0a0a0a;
+            --color-text: #f5f5f5;
+            --color-accent: #d4af37;
+            --color-overlay: rgba(0, 0, 0, 0.7);
+            --color-navbar: rgba(10, 10, 10, 0.9);
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        
+        .page-loader.fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .loader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(212, 175, 55, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--color-accent);
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Ensure content is hidden until page loads */
+        .main-content {
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+        
+        .main-content.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
+    
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+        <!-- Header & Navigation -->
+        <header class="header">
+            <nav class="navbar" id="navbar">
+                <div class="container">
+                    <div class="logo">
+                        <a href="#home"> EKOW DANIELS</a>
+                    </div>
+                    
+                    <div class="nav-toggle" id="navToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="#home" class="nav-link active">Home</a></li>
+                        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="hero-slideshow">
+                <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                <div class="hero-slide" style="background-image: url('https://drive.google.com/uc?export=view&id=1mn5eW059qiIwJrRaaorX5NaDJF5BCJtN');"></div>
+            </div>
+            
+            <div class="hero-overlay"></div>
+            
+            <div class="hero-content">
+                <h1 class="hero-title">Ekow Daniels</h1>
+                <div class="hero-tagline">
+                    <span id="typewriter-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <a href="#portfolio" class="hero-scroll">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Portfolio Section -->
+        <section class="portfolio-section" id="portfolio">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Portfolio</h2>
+                    <p class="section-subtitle">A selection of my recent work across different genres</p>
+                </div>
+                
+                <div class="portfolio-filters" id="portfolioFilters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="editorial">Editorial</button>
+                    <button class="filter-btn" data-filter="portraits">Portraits</button>
+                    <button class="filter-btn" data-filter="landscape">Landscape</button>
+                    <button class="filter-btn" data-filter="commercial">Commercial</button>
+                </div>
+                
+                <div class="portfolio-grid" id="portfolioGrid">
+                    <!-- Portfolio items will be generated by JavaScript -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">About Me</h2>
+                        <p class="about-statement">
+
+                            I'm Daniel Ecko, a professional photographer with over 8 years of experience capturing
+                             the world through my lens. My journey began on the streets of New York, where I discovered my 
+                             passion for telling stories through images.
+
+                        </p>
+                        <p class="about-statement">
+                            My work is characterized by a deep appreciation for light, composition,
+                             and the authentic moments that connect us all. Whether shooting editorial fashion,
+                              intimate portraits, or expansive landscapes, I strive to create images that evoke emotion and
+                             stand the test of time.
+                        </p>
+                        <p class="about-statement">
+                            Photography, for me, is not just about capturing what's in front of the lens, but about revealing the hidden narratives and emotions that lie beneath the surface.
+                        </p>
+                        
+                        <div class="about-stats">
+                            <div class="stat">
+                                <span class="stat-number" data-count="150">0</span>
+                                <span class="stat-label">+ Projects</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" data-count="8">0</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" data-count="24">0</span>
+                                <span class="stat-label">Countries</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-image">
+                        <div class="image-frame">
+                            <img 
+                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" 
+                                alt="Daniel Ecko portrait" 
+                                loading="lazy"
+                                class="portrait"
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">Interested in working together? Let's create something amazing.</p>
+                </div>
+                
+                <div class="contact-content">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                            <span class="underline"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email Address</label>
+                            <span class="underline"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                            <span class="underline"></span>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        
+                        <div class="form-message" id="formMessage"></div>
+                    </form>
+                    
+                    <div class="contact-info">
+                        <div class="contact-details">
+                            <h3>Contact Information</h3>
+                            <p><i class="fas fa-envelope"></i> hello@danielecko.com</p>
+                            <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                            <p><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+                        </div>
+                        
+                        <div class="social-links">
+                            <h3>Follow Me</h3>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-icon" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-icon" aria-label="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-icon" aria-label="Pinterest">
+                                    <i class="fab fa-pinterest-p"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <a href="#home">DANIEL ECKO</a>
+                    </div>
+                    
+                    <div class="footer-nav">
+                        <a href="#home">Home</a>
+                        <a href="#portfolio">Portfolio</a>
+                        <a href="#about">About</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    
+                    <div class="footer-copyright">
+                        <p>&copy; <span id="currentYear"></span> Daniel Ecko. All rights reserved.</p>
+                    </div>
+                </div>
+                
+                <button class="back-to-top" id="backToTop" aria-label="Back to top">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+            </div>
+        </footer>
+    </main>
+    
+    <!-- Image Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Previous image">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            
+            <button class="lightbox-nav next" id="lightboxNext" aria-label="Next image">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <div class="lightbox-image-container">
+                <img id="lightboxImage" src="" alt="">
+                <div class="lightbox-info">
+                    <h3 id="lightboxTitle"></h3>
+                    <p id="lightboxCategory"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    
+    <!-- Inline JavaScript for critical initial functionality -->
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Initialize page loader
+        window.addEventListener('load', function() {
+            const pageLoader = document.getElementById('pageLoader');
+            const mainContent = document.getElementById('mainContent');
+            
+            // Fade out loader
+            setTimeout(() => {
+                pageLoader.classList.add('fade-out');
+                
+                // Show main content
+                setTimeout(() => {
+                    mainContent.classList.add('loaded');
+                }, 300);
+            }, 800);
+        });
+    </script>
+</body>
+</html>
