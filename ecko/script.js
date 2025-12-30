@@ -144,18 +144,18 @@ function initPortfolio() {
     
     // Portfolio data - in a real app, this would come from an API or database
     const portfolioItems = [
-        { id: 1, title: "Urban Elegance", category: "editorial", image: "/images/EKO09687.JPG", wide: false, tall: true },
-        { id: 2, title: "Mountain Sunrise", category: "landscape", image: "/images/happy.jpg", wide: true, tall: false },
-        { id: 3, title: "Fashion Editorial", category: "editorial", image: "/images/Dawn of Friday 24th October 2.JPG", wide: false, tall: false },
-        { id: 4, title: "Corporate Portrait", category: "portraits", image: "/images/DSC01979 2.jpg", wide: false, tall: false },
-        { id: 5, title: "Product Showcase", category: "commercial", image: "/images/ekow1.JPG", wide: true, tall: false },
-        { id: 6, title: "Beach Sunset", category: "landscape", image: "/images/Dawn of Friday 24th October 4 copy.jpg", wide: false, tall: true },
-        { id: 7, title: "Studio Portrait", category: "portraits", image: "/images/2L6A95461.jpg", wide: false, tall: false },
-        { id: 8, title: "Night Cityscape", category: "landscape", image: "/images/mama 2.jpg", wide: true, tall: false },
-        { id: 9, title: "Fashion Campaign", category: "editorial", image: "/images/eater.JPG", wide: false, tall: true },
-        { id: 10, title: "Brand Advertisement", category: "commercial", image: "/images/EKO09664.JPG", wide: false, tall: false },
-        { id: 11, title: "Desert Landscape", category: "landscape", image: "/images/ST PHT 12.jpg", wide: true, tall: false },
-        { id: 12, title: "Character Portrait", category: "portraits", image: "/images/EKO09664.jpg", wide: false, tall: false }
+        { id: 1, title: "Urban Elegance", category: "editorial", image: "EKO09687.JPG", wide: false, tall: true },
+        { id: 2, title: "Mountain Sunrise", category: "landscape", image: "happy.jpg", wide: true, tall: false },
+        { id: 3, title: "Fashion Editorial", category: "editorial", image: "Dawn of Friday 24th October 2.JPG", wide: false, tall: false },
+        { id: 4, title: "Corporate Portrait", category: "portraits", image: "DSC01979 2.jpg", wide: false, tall: false },
+        { id: 5, title: "Product Showcase", category: "commercial", image: "ekow1.JPG", wide: true, tall: false },
+        { id: 6, title: "Beach Sunset", category: "landscape", image: "Dawn of Friday 24th October 4 copy.jpg", wide: false, tall: true },
+        { id: 7, title: "Studio Portrait", category: "portraits", image: "2L6A95461.jpg", wide: false, tall: false },
+        { id: 8, title: "Night Cityscape", category: "landscape", image: "mama 2.jpg", wide: true, tall: false },
+        { id: 9, title: "Fashion Campaign", category: "editorial", image: "eater.JPG", wide: false, tall: true },
+        { id: 10, title: "Brand Advertisement", category: "commercial", image: "EKO09664.JPG", wide: false, tall: false },
+        { id: 11, title: "Desert Landscape", category: "landscape", image: "ST PHT 12.jpg", wide: true, tall: false },
+        { id: 12, title: "Character Portrait", category: "portraits", image: "EKO09664.jpg", wide: false, tall: false }
     ];
     
     // Generate portfolio items
@@ -491,3 +491,4 @@ function initSmoothScroll() {
         });
     }
 }
+
