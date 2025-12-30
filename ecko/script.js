@@ -144,18 +144,18 @@ function initPortfolio() {
     
     // Portfolio data - in a real app, this would come from an API or database
     const portfolioItems = [
-        { id: 1, title: "Urban Elegance", category: "editorial", image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", wide: false, tall: true },
-        { id: 2, title: "Mountain Sunrise", category: "landscape", image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", wide: true, tall: false },
-        { id: 3, title: "Fashion Editorial", category: "editorial", image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-4.0.3&auto=format&fit=crop&w-800&q=80", wide: false, tall: false },
-        { id: 4, title: "Corporate Portrait", category: "portraits", image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", wide: false, tall: false },
-        { id: 5, title: "Product Showcase", category: "commercial", image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", wide: true, tall: false },
-        { id: 6, title: "Beach Sunset", category: "landscape", image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", wide: false, tall: true },
-        { id: 7, title: "Studio Portrait", category: "portraits", image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", wide: false, tall: false },
-        { id: 8, title: "Night Cityscape", category: "landscape", image: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", wide: true, tall: false },
-        { id: 9, title: "Fashion Campaign", category: "editorial", image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", wide: false, tall: true },
-        { id: 10, title: "Brand Advertisement", category: "commercial", image: "https://images.unsplash.com/photo-1556228578-9c360e1d8d34?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", wide: false, tall: false },
-        { id: 11, title: "Desert Landscape", category: "landscape", image: "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", wide: true, tall: false },
-        { id: 12, title: "Character Portrait", category: "portraits", image: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", wide: false, tall: false }
+        { id: 1, title: "Urban Elegance", category: "editorial", image: "/images/EKO09687.JPG", wide: false, tall: true },
+        { id: 2, title: "Mountain Sunrise", category: "landscape", image: "/images/happy.jpg", wide: true, tall: false },
+        { id: 3, title: "Fashion Editorial", category: "editorial", image: "/images/Dawn of Friday 24th October 2.JPG", wide: false, tall: false },
+        { id: 4, title: "Corporate Portrait", category: "portraits", image: "/images/DSC01979 2.jpg", wide: false, tall: false },
+        { id: 5, title: "Product Showcase", category: "commercial", image: "/images/ekow1.JPG", wide: true, tall: false },
+        { id: 6, title: "Beach Sunset", category: "landscape", image: "/images/Dawn of Friday 24th October 4 copy.jpg", wide: false, tall: true },
+        { id: 7, title: "Studio Portrait", category: "portraits", image: "/images/2L6A95461.jpg", wide: false, tall: false },
+        { id: 8, title: "Night Cityscape", category: "landscape", image: "/images/mama 2.jpg", wide: true, tall: false },
+        { id: 9, title: "Fashion Campaign", category: "editorial", image: "/images/eater.JPG", wide: false, tall: true },
+        { id: 10, title: "Brand Advertisement", category: "commercial", image: "/images/EKO09664.JPG", wide: false, tall: false },
+        { id: 11, title: "Desert Landscape", category: "landscape", image: "/images/ST PHT 12.jpg", wide: true, tall: false },
+        { id: 12, title: "Character Portrait", category: "portraits", image: "/images/EKO09664.jpg", wide: false, tall: false }
     ];
     
     // Generate portfolio items
